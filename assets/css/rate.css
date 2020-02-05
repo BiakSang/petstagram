@@ -1,0 +1,181 @@
+#rate {
+    font-size: 0;
+}
+
+.r-pet {
+    display: inline-block;
+    vertical-align: middle;
+    width: 32%;
+    max-height: 1000px;
+    position: relative;
+    margin-bottom: 30px;
+    margin-right: 2%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0,0,0,.1);
+    background: indianred;
+}
+
+.r-pet:nth-child(3n+0){
+    margin-right: 0%;
+}
+
+.r-pet img {
+    display: block;
+    width: 100%;
+    filter: contrast(1.2) opacity(.8);
+    position: relative;
+    z-index: 1;
+}
+
+.rating {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: relative;
+    font-size: 0;
+}
+
+.rating section {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.my-rating {
+    display: block;
+    position: relative;
+    z-index: 10;
+    opacity: .4;
+}
+
+.avg-rating {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.star {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.star svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.star svg polygon {
+    stroke: #777;
+    fill: none;
+}
+
+.my-rating .star.fill svg polygon {
+    stroke: #444;
+    fill: #444;
+}
+
+.rated .avg-rating .star.fill svg polygon {
+    stroke: #444;
+    fill: #444;
+}
+
+@media only screen and (max-width: 1300px){
+    
+    .r-pet {
+        width: 48%;
+        margin-right: 0%;
+        margin-bottom: 50px;
+    }
+    
+    .r-pet:nth-child(3n+0){
+        margin-right: 0%;
+    }
+    
+    .r-pet:nth-child(odd){
+        margin-right: 4%;
+    }
+    
+    @media only screen and (max-width: 800px){
+        
+        .r-pet {
+            margin-bottom: 30px;
+        }
+        
+        .rating section {
+            padding: 17px 10px;
+        }
+        
+        .star {
+            width: 16px;
+            margin: 0 7px;
+        }
+        
+        .star svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        @media only screen and (max-width: 500px){
+            
+            .r-pet {
+                display: block;
+                width: 100%;
+                margin: 0;
+                margin-bottom: 30px;
+                border: 0;
+                border-radius: 0;
+                box-shadow: 0 0 0 rgba(0,0,0,0);
+            }
+            
+            .rating section {
+                padding: 15px;
+            }
+            
+            .star {
+                width: 20px;
+                margin: 0 10px;
+            }
+            
+            .star svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

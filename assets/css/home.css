@@ -1,0 +1,233 @@
+#home,
+#liked {
+    font-size: 0;
+}
+
+.pet {
+    display: inline-block;
+    vertical-align: middle;
+    width: 32%;
+    position: relative;
+    margin-bottom: 30px;
+    margin-right: 2%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0,0,0,.1);
+    background: indianred;
+}
+
+.pet:nth-child(3n+0){
+    margin-right: 0%;
+}
+
+.pet img {
+    display: block;
+    width: 100%;
+    filter: contrast(1.2) opacity(.8);
+    position: relative;
+    z-index: 1;
+}
+
+.pet section {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background: #fff;
+}
+
+.like-btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: default;
+    transition: .2s linear;
+}
+
+.like-btn:active {
+    transform: scale(1.2);
+}
+
+.like-btn svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.like-btn ellipse,
+.like-btn path {
+    fill: none;
+}
+
+.like-btn.liked ellipse,
+.like-btn.liked path {
+    fill: #444;
+}
+
+.likes-count {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: Poppins-Regular, sans-serif;
+    font-weight: normal;
+    color: #222;
+}
+
+.save-btn,
+.share-btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+    float: right;
+    margin-top: 2.5px;
+    margin-left: 4px;
+    cursor: default;
+    transition: .2s linear;
+}
+
+.save-btn:active,
+.share-btn:active {
+    transform: scale(1.2);
+}
+
+.save-btn svg,
+.share-btn svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.save-btn polyline,
+.share-btn polyline {
+    stroke: #444;
+    stroke-width: 2;
+    fill: none;
+}
+
+.save-btn.saved polyline {
+    fill: #444;
+}
+
+.liked-alert {
+    display: none;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    margin: -80px 0 0 -40px;
+}
+
+.liked-alert.visible1,
+.liked-alert.visible2 {
+    display: block;
+}
+
+@supports (transform: scale(0)){
+    
+    .liked-alert {
+        display: block;
+        transform: scale(0);
+        transition: .1s linear;
+    }
+    
+    .liked-alert.visible1 {
+        transform: scale(1.2);
+    }
+    
+    .liked-alert.visible2 {
+        transform: scale(1);
+    }
+    
+}
+
+.liked-alert svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.liked-alert ellipse,
+.liked-alert path {
+    stroke: none;
+    fill: rgba(255,255,255,.8);
+}
+
+@media only screen and (max-width: 1300px){
+    
+    .pet {
+        width: 48%;
+        margin-right: 0%;
+        margin-bottom: 50px;
+    }
+    
+    .pet:nth-child(3n+0){
+        margin-right: 0%;
+    }
+    
+    .pet:nth-child(odd){
+        margin-right: 4%;
+    }
+    
+    @media only screen and (max-width: 800px){
+        
+        .pet {
+            margin-bottom: 30px;
+        }
+        
+        .pet section {
+            height: 50px;
+        }
+        
+        .like-btn {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .likes-count {
+            line-height: 30px;
+            font-size: 12px;
+        }
+        
+        .save-btn,
+        .share-btn {
+            width: 30px;
+            height: 30px;
+            margin-top: 0;
+        }
+        
+        .liked-alert {
+            width: 70px;
+            height: 70px;
+            margin: -70px 0 0 -35px;
+        }
+        
+        @media only screen and (max-width: 500px){
+            
+            .pet {
+                display: block;
+                width: 100%;
+                margin: 0;
+                margin-bottom: 30px;
+                border: 0;
+                border-radius: 0;
+                box-shadow: 0 0 0 rgba(0,0,0,0);
+            }
+            
+            .save-btn,
+            .share-btn {
+                margin-left: 15px;
+            }
+            
+        }
+        
+    }
+    
+}

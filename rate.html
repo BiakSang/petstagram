@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate pets - Petstagram</title>
+    <meta name="description" content="Click on a star to rate pets, your data are stored on you browser. This is just a portfolio project and it does not use any database, the average number of stars are just random.">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148948939-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-148948939-5');
+    </script>
+    
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/rate.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#222">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#eee">
+    
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body data-page="rate">
+    
+    <div id="splashscreen">
+        <svg viewbox="0 0 24 24">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke-width=".8" stroke-linejoin="round" stroke="#222" fill="#222" />
+        </svg>
+        <div>
+            <p>from</p>
+            <h1>Biaksang</h1>
+        </div>
+    </div>
+    
+    <div id="app">
+        <header class="">
+            <a href="/"><img src="assets/favicon/android-icon-192x192.png" id="logo" alt="Petstagram logo"></a>
+            <h1 id="title">petstagram</h1>
+            <button type="button" id="pet-toggle">
+                <span data-pet="dog" onclick="changePetType('dog')" title="Dogs">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><g transform="translate(0,512) scale(0.100000,-0.100000)"><path d="M2383 4790 c-256 -27 -465 -95 -642 -210 -35 -23 -71 -39 -80 -36 -9 2 -47 17 -86 32 -62 25 -84 28 -190 28 -98 1 -135 -4 -199 -23 -254 -74 -473 -248 -751 -596 -283 -353 -435 -686 -435 -949 0 -55 6 -124 14 -152 42 -159 183 -327 336 -403 53 -26 119 -49 175 -60 105 -21 99 -6 67 -178 -45 -240 -48 -575 -7 -779 89 -439 353 -760 773 -943 320 -138 664 -194 1202 -194 455 0 711 32 1013 125 531 163 861 510 962 1012 41 204 38 539 -7 779 -32 172 -38 157 67 178 56 11 122 34 175 60 153 76 294 244 336 403 22 83 18 238 -10 347 -32 124 -56 187 -123 317 -69 135 -175 296 -288 437 -278 348 -497 522 -751 596 -64 19 -101 24 -199 23 -106 0 -128 -3 -190 -28 -38 -15 -77 -30 -86 -32 -9 -3 -45 13 -80 36 -146 94 -314 158 -508 191 -132 22 -369 32 -488 19z m393 -331 c189 -26 372 -103 512 -215 138 -110 255 -268 367 -493 77 -154 106 -229 233 -586 55 -154 134 -374 177 -489 131 -357 175 -574 175 -860 0 -225 -35 -397 -112 -550 -184 -368 -614 -572 -1290 -612 l-118 -7 0 316 0 317 53 26 c167 84 329 255 394 415 70 173 39 350 -80 454 -105 92 -225 119 -527 119 -237 0 -303 -9 -420 -53 -195 -74 -276 -299 -187 -520 65 -160 227 -331 395 -415 l52 -26 0 -317 0 -316 -117 7 c-678 40 -1107 244 -1292 613 -85 170 -116 341 -108 608 8 297 43 453 201 882 52 142 134 368 182 503 155 438 265 656 429 852 150 180 393 311 640 347 87 13 351 13 441 0z m-1394 -216 c-96 -123 -220 -348 -308 -565 -25 -61 -92 -242 -149 -402 -57 -160 -125 -351 -151 -423 l-49 -133 -55 6 c-133 14 -226 61 -291 148 -48 64 -63 119 -55 200 21 211 197 520 478 841 203 232 404 364 556 365 l54 0 -30 -37z m2499 13 c130 -46 284 -165 437 -341 281 -321 457 -630 478 -841 8 -81 -7 -136 -55 -200 -65 -87 -158 -134 -291 -148 l-55 -6 -49 133 c-26 72 -94 263 -151 423 -121 340 -173 471 -255 635 -58 117 -143 257 -202 332 l-30 37 54 0 c29 0 82 -11 119 -24z m-1046 -2307 c34 -12 40 -19 43 -46 5 -47 -41 -125 -118 -204 -121 -123 -195 -147 -287 -94 -106 62 -233 221 -233 292 0 37 7 42 75 59 72 19 465 13 520 -7z"/><path d="M1955 3115 c-76 -35 -116 -95 -122 -184 -4 -56 -1 -73 19 -111 35 -65 93 -103 167 -108 73 -5 118 9 161 51 141 137 50 367 -145 366 -27 0 -63 -6 -80 -14z"/><path d="M2979 3107 c-24 -13 -57 -43 -74 -66 -27 -39 -30 -50 -30 -121 0 -71 3 -82 30 -122 86 -122 264 -122 350 0 27 40 30 51 30 122 0 71 -3 82 -30 121 -41 58 -102 89 -175 89 -40 0 -70 -7 -101 -23z"/></g></svg>
+                </span>
+                <span data-pet="cat" onclick="changePetType('cat')" title="Cats">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><g transform="translate(0,512) scale(0.100000,-0.100000)"><path d="M881 5063 c-62 -58 -244 -341 -350 -544 -252 -483 -408 -1016 -480 -1644 -34 -291 -45 -488 -45 -845 -1 -321 1 -353 22 -457 45 -223 137 -435 270 -623 77 -109 253 -289 362 -372 371 -280 838 -454 1410 -525 183 -22 762 -26 935 -5 515 62 913 188 1258 398 450 274 732 657 828 1122 38 184 35 755 -6 1190 -82 848 -300 1505 -702 2111 -123 184 -150 211 -207 211 -40 0 -64 -14 -307 -184 -312 -218 -450 -327 -579 -456 -147 -146 -235 -281 -279 -425 l-22 -70 -147 13 c-144 13 -499 11 -653 -4 l-66 -6 -12 47 c-60 237 -259 472 -641 756 -138 102 -436 312 -467 328 -39 20 -90 13 -122 -16z m277 -362 c309 -219 474 -357 577 -481 113 -136 158 -228 174 -355 18 -144 45 -160 246 -137 200 22 597 21 789 -1 82 -10 161 -15 176 -12 50 11 69 44 86 146 41 258 212 445 744 819 102 71 190 129 195 130 14 0 118 -160 206 -315 236 -417 401 -924 478 -1465 71 -497 92 -1199 43 -1425 -58 -267 -182 -493 -382 -695 -338 -342 -831 -555 -1475 -637 -174 -22 -699 -25 -870 -5 -508 59 -907 192 -1237 412 -362 240 -586 561 -665 948 -15 73 -18 137 -17 407 1 340 13 554 44 830 84 720 287 1315 633 1848 38 59 74 107 79 107 5 0 85 -53 176 -119z"/><path d="M1549 2897 c-100 -28 -166 -84 -217 -181 -35 -68 -38 -196 -5 -268 30 -66 96 -133 162 -165 49 -24 68 -28 146 -28 78 0 97 4 146 28 66 32 132 99 162 165 31 67 30 198 -2 263 -71 147 -242 228 -392 186z m124 -218 c66 -34 89 -86 62 -143 -33 -69 -125 -84 -178 -28 -51 54 -43 115 22 159 38 26 62 28 94 12z"/><path d="M3371 2895 c-71 -20 -110 -45 -165 -106 -54 -60 -76 -121 -76 -211 0 -132 62 -233 178 -290 59 -30 76 -33 152 -33 71 0 94 4 141 26 69 33 128 89 160 155 33 67 38 183 13 256 -26 73 -120 168 -189 192 -72 24 -151 28 -214 11z m132 -219 c93 -38 87 -164 -8 -196 -130 -43 -206 141 -81 196 40 17 49 17 89 0z"/><path d="M1909 2147 c-37 -25 -56 -76 -45 -120 3 -14 112 -145 241 -291 l235 -265 0 -308 c0 -286 1 -310 19 -339 38 -63 134 -66 181 -7 19 24 20 40 20 322 l0 296 240 288 c144 172 240 296 241 310 4 67 -12 100 -56 122 -28 13 -103 15 -538 15 l-504 0 -34 -23z m689 -319 c-57 -67 -110 -131 -118 -141 -15 -18 -21 -12 -120 100 -57 65 -113 128 -124 141 l-19 22 242 0 242 0 -103 -122z"/><path d="M713 2020 c-63 -38 -62 -145 2 -181 30 -17 1124 -229 1184 -229 43 0 80 20 97 51 26 52 13 116 -30 144 -23 15 -1148 235 -1201 235 -11 0 -34 -9 -52 -20z"/><path d="M3537 1930 c-313 -60 -579 -115 -591 -123 -83 -55 -38 -197 62 -197 43 0 1146 206 1180 220 27 12 62 67 62 98 0 58 -57 113 -117 111 -15 0 -284 -50 -596 -109z"/><path d="M707 1580 c-29 -23 -47 -74 -40 -114 7 -32 44 -74 75 -81 87 -20 1144 -215 1169 -215 22 0 41 10 65 34 67 67 34 162 -64 185 -118 27 -1117 211 -1147 211 -18 0 -44 -9 -58 -20z"/><path d="M3545 1494 c-302 -57 -565 -111 -583 -119 -42 -19 -67 -70 -58 -118 8 -44 56 -87 96 -87 47 0 1153 210 1188 225 104 47 64 207 -51 204 -23 0 -289 -48 -592 -105z"/></g></svg>
+                </span>
+                <div id="pet-toggle-marker"></div>
+            </button>
+            <nav>
+                <a href="/" class="nav" title="Home">
+                    <svg viewbox="0 0 100 100">
+                        <polyline points="15,40 50,15 85,40 85,85 58,85 58,52 42,52 42,85 15,85 15,40" stroke-width="3" />
+                    </svg>
+                </a>
+                <a href="/poll" class="nav" title="Poll">
+                    <svg viewbox="0 0 32 32">
+                        <path d="M13.407436,1 L13.407436,5 L14.407436,5 L14.407436,1 L13.407436,1 L13.407436,1 Z M19.8099435,3.57686389 L16.7013597,6.09414546 L17.3306801,6.87129142 L20.4392639,4.35400985 L19.8099435,3.57686389 L19.8099435,3.57686389 Z M21.8148721,10.3124234 L17.9173918,9.41261918 L17.6924408,10.3869892 L21.589921,11.2867935 L21.8148721,10.3124234 L21.8148721,10.3124234 Z M6.22495105,11.2867935 L10.1224313,10.3869892 L9.89748026,9.41261918 L6,10.3124234 L6.22495105,11.2867935 L6.22495105,11.2867935 Z M7.37560816,4.35400985 L10.484192,6.87129142 L11.1135124,6.09414546 L8.00492855,3.57686389 L7.37560816,4.35400985 L7.37560816,4.35400985 Z M19.407436,13.4908981 C19.407436,12.6674978 18.7416388,12 17.907436,12 C17.0790089,12 16.407436,12.6762201 16.407436,13.4908981 L16.407436,15.4325233 L16.407436,18 L15.407436,18 L15.407436,15.5 L15.407436,8.50863659 C15.407436,7.67543961 14.7416388,7 13.907436,7 C13.0790089,7 12.407436,7.66642015 12.407436,8.50863659 L12.407436,18.7983451 C10.3490364,16.5979243 7.63906582,14.1791206 6.52846875,15.2957153 C5.44129897,16.3887562 8.24279803,19.4007216 12.1548115,25.9830936 C13.9174319,28.9488875 16.1477209,30.9995418 19.907436,31 C24.0495719,31 27.407436,27.6421358 27.407436,23.5 L27.407436,20.2468012 L27.407436,15.5063976 C27.407436,14.6744372 26.7416388,14 25.907436,14 C25.0790089,14 24.407436,14.6764628 24.407436,15.5063976 L24.407436,17.7497253 L24.407436,18 L23.407436,18 L23.407436,15.6781559 L23.407436,14.4912653 C23.407436,13.6676622 22.7416388,13 21.907436,13 C21.0790089,13 20.407436,13.6625444 20.407436,14.4912653 L20.407436,15.5082011 L20.407436,17 L19.407436,17 L19.407436,15.5082011 L19.407436,13.4908981 L19.407436,13.4908981 Z" stroke-width="1" />
+                    </svg>
+                </a>
+                <a href="/rate" class="nav active" title="Rate pets">
+                    <svg viewbox="0 0 24 24">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke-width=".8" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="/liked" class="nav" title="Liked">
+                    <svg version="1.1" viewBox="0 0 135.47 135.47" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><metadata><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata><g transform="translate(0 -161.53)" fill="none" stroke="#000" stroke-width="3.175"><ellipse transform="rotate(3.3591)" cx="51.441" cy="196.5" rx="11.717" ry="18.435" stroke-linecap="round" style="paint-order:markers stroke fill"/><ellipse transform="rotate(19.204)" cx="131.54" cy="158.86" rx="11.717" ry="18.435" stroke-linecap="round" style="paint-order:markers stroke fill"/><ellipse transform="rotate(54.862)" cx="228.33" cy="39.509" rx="11.717" ry="18.435" stroke-linecap="round" style="paint-order:markers stroke fill"/><ellipse transform="rotate(71.567)" cx="261.18" cy="-21.004" rx="11.717" ry="18.435" stroke-linecap="round" style="paint-order:markers stroke fill"/><path d="m26.156 231.92c30.627-7.7537 14.387-6.5404 31.634-14.381 12.305-2.8478 21.525 2.1877 22.322 13.473-4.0385 19.128-1.8537 12.543 0.58198 32.47-2.4168 5.4794-6.4123 19.066-20.726 17.715-20.319-11.911-20.517-12.199-34.784-18.285-3.8444-4.7498-15.123-14.395 0.97172-30.992z"/></g></svg>
+                </a>
+                <a href="/saved" class="nav" title="Saved">
+                    <svg viewbox="0 0 100 100">
+                        <polyline points="20,18 80,18 80,82 50,55 20,82 20,18" stroke-width="3" />
+                    </svg>
+                </a>
+            </nav>
+        </header>
+        <main>
+            <div id="intro">
+                <h1>Rate pets</h1>
+                <span class="underline"></span>
+                <p>Click on a star to rate pets, your data are stored on you browser. This is just a portfolio project and it does not use any database, the average number of stars are just random.</p>
+                <img src="" id="intro-img" alt="">
+            </div>
+            <div class="page" id="rate"></div>
+            <button type="button" class="loading" id="see-more-btn" onclick="loadMorePetsToRate(this)">
+                <span>See more pets</span>
+                <svg viewbox="0 0 50 50">
+                    <polyline points="5,18 25,32 45,18" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="pets-loading" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><circle cx="50" cy="50" fill="none" stroke="#777" stroke-width="5" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(6.3252 50 50)"><animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur=".5s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform></circle></svg>
+            </button>
+        </main>
+    </div>
+    
+    <script src="assets/js/golbal-variables.js"></script>
+    <script src="assets/js/db.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>

@@ -1,0 +1,370 @@
+@font-face {
+    font-family: Poppins-ExtraBold;
+    src: url(../fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: Cosmopolitan-ScriptBold;
+    src: url(../fonts/Cosmopolitan-ScriptBold.otf);
+}
+
+@font-face {
+    font-family: Cosmopolitan-SansMedium;
+    src: url(../fonts/Cosmopolitan-SansMedium.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    background: #fff;
+}
+
+#splashscreen {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+#splashscreen.hidden {
+    display: none;
+}
+
+#splashscreen svg {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 2px;
+    margin: -56.5px 0 0 -25px;
+}
+
+#splashscreen div {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+
+#splashscreen p {
+    display: block;
+    width: 100%;
+    line-height: 18px;
+    font-size: 14px;
+    text-align: center;
+    color: brown;
+    font-family: Poppins-Regular, sans-serif;
+    font-weight: normal;
+}
+
+#splashscreen h1 {
+    display: block;
+    width: 100%;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: center;
+    color: #444;
+    font-family: Poppins-Regular, sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#app {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-top: 70px;
+}
+
+#intro {
+    display: block;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+#intro h1 {
+    display: block;
+    width: 700px;
+    line-height: 40px;
+    font-size: 30px;
+    font-family: Poppins-ExtraBold, sans-serif;
+    font-weight: bolder;
+    color: #444;
+    text-align: left;
+    position: relative;
+    z-index: 10;
+}
+
+#intro p {
+    display: block;
+    width: 700px;
+    line-height: 25px;
+    font-size: 16px;
+    font-family: Poppins-Regular, sans-serif;
+    font-weight: normal;
+    color: #444;
+    text-align: left;
+    position: relative;
+    z-index: 10;
+}
+
+#intro p a {
+    color: blueviolet;
+}
+
+#intro p a:hover {
+    text-decoration: underline;
+}
+
+#intro img {
+    display: block;
+    height: 60%;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    right: 5%;
+}
+
+#intro .underline {
+    display: block;
+    width: 70px;
+    height: 2px;
+    background: #555;
+    margin: 10px 0 15px 10px;
+}
+
+.page {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#see-more-btn {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto 50px auto;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    position: relative;
+}
+
+#see-more-btn span {
+    display: block;
+    width: 100%;
+    line-height: 25px;
+    font-size: 16px;
+    font-family: Poppins-Regular, sans-serif;
+    color: #444;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+#see-more-btn.loading span {
+    display: none;
+}
+
+#see-more-btn svg:not(#pets-loading) {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    top: 0;
+    transition: .2s linear;
+}
+
+#see-more-btn.loading svg:not(#pets-loading) {
+    display: none;
+}
+
+#see-more-btn svg:not(#pets-loading) polyline {
+    stroke: #444;
+    stroke-width: 2;
+    fill: none;
+}
+
+#see-more-btn:hover svg:not(#pets-loading) {
+    top: 10px;
+}
+
+#pets-loading {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.loading #pets-loading {
+    display: block;
+}
+
+@media only screen and (max-width: 1300px){
+    
+    #app {
+        width: 100%;
+        padding: 0 50px;
+    }
+    
+    #intro h1,
+    #intro p {
+        width: 60%;
+    }
+    
+    @media only screen and (max-width: 1000px){
+        
+        #app {
+            padding: 0 30px;
+        }
+        
+        #intro h1 {
+            width: 50%;
+            line-height: 35px;
+            font-size: 25px;
+        }
+        
+        #intro .underline {
+            width: 40px;
+        }
+        
+        #intro p {
+            width: 45%;
+            line-height: 23px;
+            font-size: 14px;
+        }
+        
+        #intro img {
+            height: 60%;
+            top: 20%;
+            right: 2%;
+        }
+        
+        @media only screen and (max-width: 800px){
+            
+            main {
+                padding: 50px 0;
+            }
+            
+        }
+        
+        @media only screen and (max-width: 700px){
+            
+            #intro {
+                padding: 40px 0;
+            }
+            
+            #intro h1,
+            #intro p {
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            #intro .underline {
+                margin: 10px auto;
+            }
+            
+            #intro img {
+                width: 40%;
+                height: auto;
+                margin: 40px auto 0 auto;
+                position: relative;
+                top: 0;
+                right: 0;
+            }
+            
+            #see-more-btn {
+                height: 40px;
+            }
+            
+            #see-more-btn span {
+                line-height: 20px;
+                font-size: 12px;
+            }
+            
+            #see-more-btn svg:not(#pets-loading) {
+                width: 20px;
+                height: 20px;
+            }
+            
+            #pets-loading {
+                width: 30px;
+                height: 30px;
+                margin-left: -15px;
+            }
+            
+            @media only screen and (max-width: 500px){
+                
+                #app {
+                    padding: 0;
+                }
+                
+                #intro h1 {
+                    line-height: 30px;
+                    font-size: 20px;
+                }
+                
+                #intro p {
+                    line-height: 20px;
+                    font-size: 12px;
+                }
+                
+                #intro img {
+                    width: 60%;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}

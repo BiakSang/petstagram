@@ -1,0 +1,460 @@
+header {
+    display: block;
+    width: 1200px;
+    height: 70px;
+    background: #fff;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    margin-left: -600px;
+    font-size: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    transition: .2s linear;
+}
+
+#logo {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    margin-right: 20px;
+}
+
+#title {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px;
+    font-size: 40px;
+    font-family: Cosmopolitan-ScriptBold, cursive;
+    color: #222;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#pet-toggle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 110px;
+    height: 40px;
+    float: right;
+    border-radius: 20px;
+    background: #eee;
+    overflow: hidden;
+    font-size: 0;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    position: relative;
+}
+
+#pet-toggle span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+#pet-toggle span svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 8px auto;
+}
+
+#pet-toggle span svg path {
+    stroke: #444;
+    stroke-width: 50;
+    fill: #444;
+    transition: .2s linear;
+}
+
+#pet-toggle span.active svg path {
+    stroke: #fff;
+    fill: #ddd;
+}
+
+#pet-toggle-marker {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: blueviolet;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(0,0,0,.8);
+    transition: .2s linear;
+}
+
+header nav {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin-top: 1px;
+    padding-right: 15px;
+    margin-right: 15px;
+    border-right: 1px solid #999;
+}
+
+.nav {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.nav svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nav svg ellipse,
+.nav svg path,
+.nav svg polyline,
+.nav svg polygon {
+    stroke: #222;
+    fill: none;
+}
+
+.nav.active svg ellipse,
+.nav.active svg path,
+.nav.active svg polyline,
+.nav.active svg polygon {
+    fill: #222;
+}
+
+@media only screen and (max-width: 1300px){
+    
+    header {
+        width: 100%;
+        padding: 15px 50px;
+        left: 0;
+        margin: 0;
+    }
+    
+    @media only screen and (max-width: 1000px){
+        
+        header {
+            padding: 15px 30px;
+        }
+        
+        @media only screen and (max-width: 800px){
+            
+            header {
+                height: 50px;
+                padding: 7px 20px;
+            }
+            
+            #logo {
+                height: 32px;
+                margin-right: 15px;
+            }
+            
+            #title {
+                line-height: 36px;
+                font-size: 35px;
+            }
+            
+            #pet-toggle {
+                width: 100px;
+                height: 36px;
+            }
+            
+            #pet-toggle span svg {
+                display: block;
+                width: 20px;
+                height: 20px;
+                margin: 8px auto;
+            }
+            
+            header nav {
+                display: block;
+                width: 100%;
+                height: 50px;
+                padding: 5px 0;
+                margin: 0;
+                border-top: 1px solid #eee;
+                border-right: 0;
+                font-size: 0;
+                background: #fff;
+                position: fixed;
+                z-index: 100;
+                bottom: 0;
+                left: 0;
+                text-align: center;
+            }
+            
+            .nav {
+                width: 20%;
+                height: 100%;
+                margin: 0;
+            }
+            
+            .nav svg {
+                margin: 0 auto;
+            }
+            
+            @media only screen and (max-width: 500px){
+                
+                header {
+                    padding: 7px 10px;
+                }
+                
+                #logo {
+                    margin-right: 10px;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+
+/*
+.nav {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 38px;
+    font-size: 18px;
+    padding: 0 25px;
+    font-family: Cosmopolitan-SansMedium, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #eee;
+    color: #777;
+    margin-left: 5px;
+    border-radius: 19px;
+    transition: .3s linear;
+}
+
+.nav.active,
+.nav:hover {
+    background: blueviolet;
+    color: #fff;
+}
+
+#pet-toggle {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    width: 120px;
+    height: 38px;
+    background: #eee;
+    font-size: 0;
+    border: 0;
+    border-radius: 19px;
+    outline: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#pet-toggle span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    line-height: 38px;
+    background: transparent;
+    text-align: center;
+    font-family: Cosmopolitan-SansMedium, sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
+    font-size: 16px;
+    color: #222;
+    position: relative;
+    z-index: 10;
+}
+
+#pet-toggle span.active {
+    color: #fff;
+}
+
+#pet-toggle-marker {
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: blueviolet;
+    border-radius: 19px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    transition: .2s linear;
+}
+
+#menu-btn {
+    display: none;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-left: 15px;
+    border-radius: 50%;
+    border: 0;
+    background: blueviolet;
+    position: relative;
+    outline: 0;
+    transition: .2s linear;
+}
+
+#menu-btn:active {
+    transform: scale(1.1);
+    background: indianred;
+}
+
+header.active #menu-btn {
+    background: indianred;
+}
+
+#menu-btn span {
+    display: block;
+    width: 15px;
+    height: 2px;
+    background: #ddd;
+    margin: 4px auto;
+    transform-origin: center;
+    transition: .2s linear;
+}
+
+header.active #mb1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -7.5px;
+    transform: rotate(45deg);
+}
+
+header.active #mb2 {
+    opacity: 0;
+}
+
+header.active #mb3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -7.5px;
+    transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 1300px){
+    
+    header {
+        width: 100%;
+        padding: 15px 50px;
+        left: 0;
+        margin: 0;
+    }
+    
+    @media only screen and (max-width: 1000px){
+        
+        header {
+            overflow: hidden;
+            padding: 15px 30px;
+        }
+        
+        header.active {
+            height: 100%;
+            overflow: auto;
+        }
+        
+        #menu-btn {
+            display: inline-block;
+        }
+        
+        header nav {
+            display: block;
+            width: 100%;
+            float: none;
+            padding: 0;
+            margin: 50px 0;
+            border: 0;
+        }
+        
+        .nav {
+            display: block;
+            width: 100%;
+            margin: 0;
+            line-height: 60px;
+            border-radius: 0;
+            background: transparent;
+            font-size: 20px;
+            padding: 0 10px;
+        }
+        
+        .nav.active {
+            padding: 0 30px;
+            background: #222;
+        }
+        
+        @media only screen and (max-width: 500px){
+            
+            header {
+                height: 60px;
+                padding: 10px 20px;
+            }
+            
+            #logo {
+                height: 36px;
+                margin-right: 12px;
+            }
+            
+            #title {
+                font-size: 30px;
+            }
+            
+            #pet-toggle {
+                width: 100px;
+                height: 36px;
+                margin-top: 2px;
+            }
+            
+            #pet-toggle span {
+                line-height: 36px;
+                font-size: 13px;
+            }
+            
+            #menu-btn {
+                width: 36px;
+                height: 36px;
+                margin-top: 2px;
+                margin-left: 8px;
+            }
+            
+            #menu-btn.active #mb1 {
+                margin: -.5px 0 0 -6px;
+            }
+            
+            #menu-btn.active #mb3 {
+                margin: -.5px 0 0 -6px;
+            }
+            
+            header nav {
+                margin: 40px auto;
+            }
+            
+            .nav {
+                line-height: 50px;
+                font-size: 18px;
+            }
+            
+            .nav.active {
+                padding: 0 15px;
+            }
+            
+        }
+        
+    }
+    
+}
+*/
+
