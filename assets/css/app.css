@@ -43,7 +43,7 @@ html {
 }
 
 #splashscreen {
-    display: block;
+    display: none;
     width: 100%;
     height: 100%;
     background: #fff;
@@ -53,8 +53,8 @@ html {
     left: 0;
 }
 
-#splashscreen.hidden {
-    display: none;
+#splashscreen.visible {
+    display: block;
 }
 
 #splashscreen svg {
@@ -101,11 +101,15 @@ html {
 }
 
 #app {
-    display: block;
+    display: none;
     width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+}
+
+#app.visible {
+    display: block;
 }
 
 main {
